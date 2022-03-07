@@ -1,27 +1,35 @@
 require "csv"
 
+
 puts "じゃんけん..."
 puts "0(グー）1(チョキ)2(パー)3(戦わない)"
 
 choiceNumber = gets.chomp
-# 配列を入力して呼び出す
-# ジャンケンのてをまとめる
-rock = "グー"
-scissors = "チョキ"
-paper = "パー"
+
+# ジャンケンの手
+hands = ["グー","チョキ","パー"]
+rock = hands[0]
+scissors = hands[1]
+paper = hands[2]
 
 # じゃんけんの手を表示させる関数
 def zyanken(hand)
+  hands = ["グー","チョキ","パー"]
+  rivalhands = hands.sample
   puts "ホイ！"
   puts "---------------"
   puts "あなた:#{hand}を出しました"
-  # puts "相手:#{ここにランダムに出す関数を入れる}を出しました"
+  puts "相手:#{rivalhands}を出しました。"
   puts "---------------"
 end
 
-def rival
-  pu
-  
+勝敗の判断
+def result
+  if hand = rivalhands
+    ジャンケンで勝っていたら(文字が異なっていたら)
+  else
+    # あいこだったら（文字が同じだったら）
+  end
 end
 
 if choiceNumber == "0"
@@ -32,11 +40,6 @@ elsif choiceNumber == "2"
   zyanken(paper)
 elsif choiceNumber == "3"
   puts "じゃんけんをする場合は、zyanken.rbを呼び出してください。"
+else 
+  puts "0,1,2,3のどれかを選択してください。"
 end
-
-
-
-# 必要な機能は
-# ・ランダムに相手がじゃんけんの手を出してくる
-# ・勝敗の判断（あいこも含めて）
-  
