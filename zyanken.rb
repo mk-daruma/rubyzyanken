@@ -48,6 +48,7 @@ def battle(hand)
   end
 end
 
+#ジャンケンとあっち向いてホイの関数を呼び出すための関数
 def zyanken
   puts "0(グー）1(チョキ)2(パー)3(戦わない)"
   choiceHands = gets.chomp
